@@ -1,6 +1,5 @@
 ---
-- hosts: web_services
-  become: true
+- hosts: all
+  gather_facts: false
   tasks:
-    - name: Ping VM
-      ansible.builtin.ping:
+    - ping:
